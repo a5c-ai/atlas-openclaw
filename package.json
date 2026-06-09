@@ -1,0 +1,67 @@
+{
+  "name": "@a5c-ai/atlas-openclaw",
+  "version": "5.0.1-staging.28347f861706",
+  "type": "module",
+  "description": "Turn a stated need into a full system design by mining the Atlas knowledge graph.",
+  "openclaw": {
+    "extensions": [
+      "./extensions"
+    ],
+    "compat": {
+      "minVersion": "0.1.0"
+    },
+    "build": {
+      "hooks": "extensions/index.ts"
+    }
+  },
+  "keywords": [
+    "babysitter",
+    "openclaw",
+    "orchestration",
+    "ai-agent",
+    "sdk-integration"
+  ],
+  "dependencies": {
+    "@a5c-ai/babysitter-sdk": "5.0.1-staging.28347f861706"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "scripts": {
+    "plugin:install": "node bin/install.cjs --global",
+    "plugin:uninstall": "node bin/uninstall.cjs --global",
+    "test": "node --test test/integration.test.js",
+    "test:integration": "node --test test/integration.test.js",
+    "test:packaged-install": "node test/packaged-install.test.cjs",
+    "deploy": "npm publish --access public",
+    "deploy:staging": "npm publish --access public --tag staging"
+  },
+  "bin": {
+    "atlas-openclaw": "bin/cli.cjs"
+  },
+  "files": [
+    "bin/",
+    "package.json",
+    "versions.json",
+    "plugin.json",
+    "openclaw.plugin.json",
+    "extensions/",
+    "skills/",
+    "commands/",
+    "scripts/",
+    "README.md"
+  ],
+  "author": "a5c.ai",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a5c-ai/atlas-openclaw.git"
+  },
+  "homepage": "https://github.com/a5c-ai/atlas-openclaw#readme",
+  "bugs": {
+    "url": "https://github.com/a5c-ai/atlas-openclaw/issues"
+  }
+}

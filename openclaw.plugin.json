@@ -1,0 +1,12 @@
+{
+  "name": "atlas",
+  "version": "5.0.1-staging.28347f861706",
+  "description": "Turn a stated need into a full system design by mining the Atlas knowledge graph.",
+  "entrypoint": "extensions/index.ts",
+  "hooks": {},
+  "capabilities": [
+    "orchestration",
+    "process-management",
+    "human-in-the-loop"
+  ]
+}
